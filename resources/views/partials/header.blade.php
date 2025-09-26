@@ -28,7 +28,7 @@
           <a href="{{ url('/contact') }}"><span class="title">Contact</span></a>
         </li>
         <li class="list-inline-item list_s"><a href="#" class="btn flaticon-user" data-toggle="modal" data-target=".bd-example-modal-lg"> <span class="dn-lg text-thm3">Login/Register</span></a></li>
-        <li class="list-inline-item add_listing home2"><a href="#"><span class="flaticon-plus"></span><span class="dn-lg"> Create Listing</span></a></li>
+      
       </ul>
     </nav>
   </div>

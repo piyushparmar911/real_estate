@@ -5,73 +5,11 @@
 @section('content')
 <!-- Listing Grid View -->
 <section class="our-listing bgc-f7 pb30-991">
-  <div class="container">
+  <div class="container-fluid p0">
     <div class="row">
       <div class="col-lg-12">
-        <div class="listing_sidebar dn db-991">
-          <div class="sidebar_content_details style3">
-            <div class="sidebar_listing_list style2 mobile_sytle_sidebar mb0">
-              <div class="sidebar_advanced_search_widget">
-                <h4 class="mb25">Advanced Search <a class="filter_closed_btn float-right" href="#"><small>Hide Filter</small> <span class="flaticon-close"></span></a></h4>
-                <ul class="sasw_list style2 mb0">
-                  <li class="search_area">
-                    <div class="form-group">
-                      <input type="text" class="form-control" id="exampleInputName1" placeholder="keyword">
-                      <label for="exampleInputEmail"><span class="flaticon-magnifying-glass"></span></label>
-                    </div>
-                  </li>
-                  <li class="search_area">
-                    <div class="form-group">
-                      <input type="text" class="form-control" id="exampleInputEmail" placeholder="Location">
-                      <label for="exampleInputEmail"><span class="flaticon-maps-and-flags"></span></label>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="search_option_two">
-                      <div class="candidate_revew_select">
-                        <select class="selectpicker w100 show-tick">
-                          <option>Status</option>
-                          <option>For Rent</option>
-                          <option>For Sale</option>
-                          <option>Sold</option>
-                        </select>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="search_option_two">
-                      <div class="candidate_revew_select">
-                        <select class="selectpicker w100 show-tick">
-                          <option>Property Type</option>
-                          <option>Apartment</option>
-                          <option>Villa</option>
-                          <option>House</option>
-                          <option>Condo</option>
-                        </select>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="search_option_button">
-                      <button type="submit" class="btn btn-block btn-thm">Search</button>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-6">
-        <div class="dn db-991">
-          <div id="main2">
-            <span id="open2" class="flaticon-filter-results-button filter_open_btn style3"> Show Filter</span>
-          </div>
-        </div>
-        <div class="breadcrumb_content style2 mt30-767 mb30-767">
-          <ol class="breadcrumb">
+        <div class="breadcrumb_content style2 text-center">
+          <ol class="breadcrumb justify-content-center">
             <li class="breadcrumb-item"><a href="{{ url('/') }}">Home</a></li>
             <li class="breadcrumb-item active text-thm" aria-current="page">Property Listings</li>
           </ol>
@@ -80,9 +18,10 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-lg-4 col-xl-4">
+      <div class="col-lg-3 col-xl-3 pl30 pr15 hidden" id="sidebar" style="transition: all 0.3s ease-in-out;">
         <div class="sidebar_listing_list dn-991">
           <div class="sidebar_advanced_search_widget">
+            <h4 class="mb25">Advanced Search <a class="filter_closed_btn float-right" href="#" onclick="toggleSidebar()" style="color: black; text-decoration: none;"><span class="flaticon-close"></span></a></h4>
             <ul class="sasw_list mb0">
               <li class="search_area">
                 <div class="form-group">
@@ -171,12 +110,13 @@
           </div>
         </div>
       </div>
-      <div class="col-md-12 col-lg-8">
+      <div class="col-lg-12 pl30 pr30" id="mainContent" style="transition: all 0.3s ease-in-out;">
         <div class="row">
           <div class="grid_list_search_result">
             <div class="col-sm-12 col-md-4 col-lg-4 col-xl-5">
-              <div class="left_area tac-xsd">
-                <p>9 Search results</p>
+              <div class="left_area tac-xsd d-flex align-items-center">
+                <span id="filterIcon" class="flaticon-filter-results-button filter_open_btn mr15 mt-2" onclick="toggleSidebar()" style="cursor: pointer; display: inline-block; color: black; font-size: 18px; padding: 8px; background-color: transparent !important;"></span>
+                <p class="mb0 mt-2">9 Search results</p>
               </div>
             </div>
             <div class="col-sm-12 col-md-8 col-lg-8 col-xl-7">
@@ -203,8 +143,8 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-6 col-lg-6">
-            <div class="feat_property home7">
+          <div class="col-md-6 col-lg-3 property-item" style="transition: all 0.3s ease-in-out;">
+            <div class="feat_property home7 style4">
               <div class="thumb">
                 <img class="img-whp" src="{{ asset('images/property/fp1.jpg') }}" alt="fp1.jpg">
                 <div class="thmb_cntnt">
@@ -240,8 +180,8 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6 col-lg-6">
-            <div class="feat_property home7">
+          <div class="col-md-6 col-lg-3 property-item" style="transition: all 0.3s ease-in-out;">
+            <div class="feat_property home7 style4">
               <div class="thumb">
                 <img class="img-whp" src="{{ asset('images/property/fp2.jpg') }}" alt="fp2.jpg">
                 <div class="thmb_cntnt">
@@ -277,8 +217,8 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6 col-lg-6">
-            <div class="feat_property home7">
+          <div class="col-md-6 col-lg-3 property-item" style="transition: all 0.3s ease-in-out;">
+            <div class="feat_property home7 style4">
               <div class="thumb">
                 <img class="img-whp" src="{{ asset('images/property/fp3.jpg') }}" alt="fp3.jpg">
                 <div class="thmb_cntnt">
@@ -314,8 +254,8 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6 col-lg-6">
-            <div class="feat_property home7">
+          <div class="col-md-6 col-lg-3 property-item" style="transition: all 0.3s ease-in-out;">
+            <div class="feat_property home7 style4">
               <div class="thumb">
                 <img class="img-whp" src="{{ asset('images/property/fp1.jpg') }}" alt="fp1.jpg">
                 <div class="thmb_cntnt">
@@ -344,9 +284,157 @@
                 <div class="fp_footer">
                   <ul class="fp_meta float-left mb0">
                     <li class="list-inline-item"><a href="#"><img src="{{ asset('images/property/pposter1.png') }}" alt="pposter1.png"></a></li>
-                    <li class="list-inline-item"><a href="#">Mike Chen</a></li>
+                  <li class="list-inline-item"><a href="#">Mike Chen</a></li>
                   </ul>
                   <div class="fp_pdate float-right">1 year ago</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 property-item" style="transition: all 0.3s ease-in-out;">
+            <div class="feat_property home7 style4">
+              <div class="thumb">
+                <img class="img-whp" src="{{ asset('images/property/fp2.jpg') }}" alt="fp2.jpg">
+                <div class="thmb_cntnt">
+                  <ul class="tag mb0">
+                    <li class="list-inline-item"><a href="#">For Sale</a></li>
+                    <li class="list-inline-item"><a href="#">Featured</a></li>
+                  </ul>
+                  <ul class="icon mb0">
+                    <li class="list-inline-item"><a href="#"><span class="flaticon-transfer-1"></span></a></li>
+                    <li class="list-inline-item"><a href="#"><span class="flaticon-heart"></span></a></li>
+                  </ul>
+                  <a class="fp_price" href="#">$1,200,000</a>
+                </div>
+              </div>
+              <div class="details">
+                <div class="tc_content">
+                  <p class="text-thm">Luxury Villa</p>
+                  <h4>Oceanfront Villa</h4>
+                  <p><span class="flaticon-placeholder"></span> 2500 Ocean Drive, Miami Beach, FL 33139</p>
+                  <ul class="prop_details mb0">
+                    <li class="list-inline-item"><a class="text-thm3" href="#">Beds: 6</a></li>
+                    <li class="list-inline-item"><a class="text-thm3" href="#">Baths: 4</a></li>
+                    <li class="list-inline-item"><a class="text-thm3" href="#">Sq Ft: 8500</a></li>
+                  </ul>
+                </div>
+                <div class="fp_footer">
+                  <ul class="fp_meta float-left mb0">
+                    <li class="list-inline-item"><a href="#"><img src="{{ asset('images/property/pposter1.png') }}" alt="pposter1.png"></a></li>
+                    <li class="list-inline-item"><a href="#">Emma Wilson</a></li>
+                  </ul>
+                  <div class="fp_pdate float-right">3 months ago</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 property-item" style="transition: all 0.3s ease-in-out;">
+            <div class="feat_property home7 style4">
+              <div class="thumb">
+                <img class="img-whp" src="{{ asset('images/property/fp3.jpg') }}" alt="fp3.jpg">
+                <div class="thmb_cntnt">
+                  <ul class="tag mb0">
+                    <li class="list-inline-item"><a href="#">For Rent</a></li>
+                    <li class="list-inline-item dn"></li>
+                  </ul>
+                  <ul class="icon mb0">
+                    <li class="list-inline-item"><a href="#"><span class="flaticon-transfer-1"></span></a></li>
+                    <li class="list-inline-item"><a href="#"><span class="flaticon-heart"></span></a></li>
+                  </ul>
+                  <a class="fp_price" href="#">$3,500<small>/mo</small></a>
+                </div>
+              </div>
+              <div class="details">
+                <div class="tc_content">
+                  <p class="text-thm">Penthouse</p>
+                  <h4>Downtown Penthouse</h4>
+                  <p><span class="flaticon-placeholder"></span> 800 Main St, New York, NY 10001</p>
+                  <ul class="prop_details mb0">
+                    <li class="list-inline-item"><a class="text-thm3" href="#">Beds: 3</a></li>
+                    <li class="list-inline-item"><a class="text-thm3" href="#">Baths: 3</a></li>
+                    <li class="list-inline-item"><a class="text-thm3" href="#">Sq Ft: 2500</a></li>
+                  </ul>
+                </div>
+                <div class="fp_footer">
+                  <ul class="fp_meta float-left mb0">
+                    <li class="list-inline-item"><a href="#"><img src="{{ asset('images/property/pposter1.png') }}" alt="pposter1.png"></a></li>
+                    <li class="list-inline-item"><a href="#">David Brown</a></li>
+                  </ul>
+                  <div class="fp_pdate float-right">6 months ago</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 property-item" style="transition: all 0.3s ease-in-out;">
+            <div class="feat_property home7 style4">
+              <div class="thumb">
+                <img class="img-whp" src="{{ asset('images/property/fp1.jpg') }}" alt="fp1.jpg">
+                <div class="thmb_cntnt">
+                  <ul class="tag mb0">
+                    <li class="list-inline-item"><a href="#">For Sale</a></li>
+                    <li class="list-inline-item dn"></li>
+                  </ul>
+                  <ul class="icon mb0">
+                    <li class="list-inline-item"><a href="#"><span class="flaticon-transfer-1"></span></a></li>
+                    <li class="list-inline-item"><a href="#"><span class="flaticon-heart"></span></a></li>
+                  </ul>
+                  <a class="fp_price" href="#">$750,000</a>
+                </div>
+              </div>
+              <div class="details">
+                <div class="tc_content">
+                  <p class="text-thm">Townhouse</p>
+                  <h4>Modern Townhouse</h4>
+                  <p><span class="flaticon-placeholder"></span> 1200 Oak Street, Chicago, IL 60610</p>
+                  <ul class="prop_details mb0">
+                    <li class="list-inline-item"><a class="text-thm3" href="#">Beds: 4</a></li>
+                    <li class="list-inline-item"><a class="text-thm3" href="#">Baths: 3</a></li>
+                    <li class="list-inline-item"><a class="text-thm3" href="#">Sq Ft: 3200</a></li>
+                  </ul>
+                </div>
+                <div class="fp_footer">
+                  <ul class="fp_meta float-left mb0">
+                    <li class="list-inline-item"><a href="#"><img src="{{ asset('images/property/pposter1.png') }}" alt="pposter1.png"></a></li>
+                    <li class="list-inline-item"><a href="#">Lisa Garcia</a></li>
+                  </ul>
+                  <div class="fp_pdate float-right">8 months ago</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 property-item" style="transition: all 0.3s ease-in-out;">
+            <div class="feat_property home7 style4">
+              <div class="thumb">
+                <img class="img-whp" src="{{ asset('images/property/fp2.jpg') }}" alt="fp2.jpg">
+                <div class="thmb_cntnt">
+                  <ul class="tag mb0">
+                    <li class="list-inline-item"><a href="#">For Rent</a></li>
+                    <li class="list-inline-item"><a href="#">Featured</a></li>
+                  </ul>
+                  <ul class="icon mb0">
+                    <li class="list-inline-item"><a href="#"><span class="flaticon-transfer-1"></span></a></li>
+                    <li class="list-inline-item"><a href="#"><span class="flaticon-heart"></span></a></li>
+                  </ul>
+                  <a class="fp_price" href="#">$4,200<small>/mo</small></a>
+                </div>
+              </div>
+              <div class="details">
+                <div class="tc_content">
+                  <p class="text-thm">Apartment</p>
+                  <h4>Luxury Family Home</h4>
+                  <p><span class="flaticon-placeholder"></span> 1421 San Pedro St, Los Angeles, CA 90015</p>
+                  <ul class="prop_details mb0">
+                    <li class="list-inline-item"><a class="text-thm3" href="#">Beds: 4</a></li>
+                    <li class="list-inline-item"><a class="text-thm3" href="#">Baths: 2</a></li>
+                    <li class="list-inline-item"><a class="text-thm3" href="#">Sq Ft: 5280</a></li>
+                  </ul>
+                </div>
+                <div class="fp_footer">
+                  <ul class="fp_meta float-left mb0">
+                    <li class="list-inline-item"><a href="#"><img src="{{ asset('images/property/pposter1.png') }}" alt="pposter1.png"></a></li>
+                    <li class="list-inline-item"><a href="#">Robert Smith</a></li>
+                  </ul>
+                  <div class="fp_pdate float-right">5 months ago</div>
                 </div>
               </div>
             </div>
@@ -376,3 +464,104 @@
   </div>
 </section>
 @endsection
+
+<style>
+.property-item {
+    transition: all 0.3s ease-in-out;
+}
+
+.filter_open_btn {
+    transition: all 0.2s ease-in-out;
+    border-radius: 4px;
+    background-color: rgba(0,0,0,0.05);
+}
+
+
+.filter_closed_btn {
+    transition: all 0.2s ease-in-out;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+
+#sidebar {
+    overflow: hidden;
+}
+
+#sidebar.hidden {
+    width: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin: 0 !important;
+    opacity: 0;
+    transform: translateX(-100%);
+    min-width: 0 !important;
+    flex: 0 0 0% !important;
+    max-width: 0% !important;
+}
+</style>
+
+<script>
+let sidebarVisible = false;
+
+function toggleSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    const mainContent = document.getElementById('mainContent');
+    const propertyItems = document.querySelectorAll('.property-item');
+    const filterIcon = document.getElementById('filterIcon');
+    
+    if (sidebarVisible) {
+        // Hide sidebar smoothly
+        sidebar.classList.add('hidden');
+        
+        // Immediately adjust main content to fill the space
+        setTimeout(() => {
+            mainContent.className = 'col-lg-12 pl30 pr30';
+            mainContent.style.transition = 'all 0.3s ease-in-out';
+            mainContent.style.width = '100%';
+            mainContent.style.flex = '0 0 100%';
+            mainContent.style.maxWidth = '100%';
+            
+            // Change properties from 3 per row to 4 per row
+            propertyItems.forEach(item => {
+                item.className = item.className.replace('col-lg-4', 'col-lg-3');
+                item.style.transition = 'all 0.3s ease-in-out';
+            });
+        }, 50);
+        
+        // Show filter icon after sidebar is hidden
+        setTimeout(() => {
+            filterIcon.style.display = 'inline-block';
+            filterIcon.style.opacity = '0';
+            filterIcon.style.transition = 'opacity 0.2s ease-in-out';
+            setTimeout(() => {
+                filterIcon.style.opacity = '1';
+            }, 10);
+        }, 300);
+        
+        sidebarVisible = false;
+    } else {
+        // Hide filter icon first
+        filterIcon.style.opacity = '0';
+        setTimeout(() => {
+            filterIcon.style.display = 'none';
+        }, 200);
+        
+        // Show sidebar
+        setTimeout(() => {
+            sidebar.classList.remove('hidden');
+            mainContent.className = 'col-lg-9 col-xl-9 pl15 pr30';
+            mainContent.style.width = '';
+            mainContent.style.flex = '';
+            mainContent.style.maxWidth = '';
+            
+            // Change properties from 4 per row to 3 per row
+            propertyItems.forEach(item => {
+                item.className = item.className.replace('col-lg-3', 'col-lg-4');
+            });
+        }, 50);
+        
+        sidebarVisible = true;
+    }
+}
+</script>
