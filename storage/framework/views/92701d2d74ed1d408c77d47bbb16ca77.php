@@ -1,8 +1,6 @@
-@extends('layouts.app')
+<?php $__env->startSection('title', 'Property Listings - Grid View'); ?>
 
-@section('title', 'Property Listings - Grid View')
-
-@section('content')
+<?php $__env->startSection('content'); ?>
 <!-- Listing Grid View -->
 <section class="our-listing bgc-f7 pb30-991">
   <div class="container-fluid p0">
@@ -10,7 +8,7 @@
       <div class="col-lg-12">
         <div class="breadcrumb_content style2 text-center">
           <ol class="breadcrumb justify-content-center">
-            <li class="breadcrumb-item"><a href="{{ url('/') }}">Home</a></li>
+            <li class="breadcrumb-item"><a href="<?php echo e(url('/')); ?>">Home</a></li>
             <li class="breadcrumb-item active text-thm" aria-current="page">Property Listings</li>
           </ol>
           <h2 class="breadcrumb_title">Property Listings - Grid View</h2>
@@ -144,9 +142,9 @@
         </div>
         <div class="row">
           <div class="col-md-6 col-lg-3 property-item" style="transition: all 0.3s ease-in-out;">
-            <div class="feat_property home7 style4 property-card" style="cursor: pointer;" onclick="window.location.href='{{ route('listing.single.v2') }}'">
+            <div class="feat_property home7 style4 property-card" style="cursor: pointer;" onclick="window.location.href='<?php echo e(route('listing.single.v2')); ?>'">
               <div class="thumb">
-                <img class="img-whp" src="{{ asset('images/property/fp1.jpg') }}" alt="fp1.jpg">
+                <img class="img-whp" src="<?php echo e(asset('images/property/fp1.jpg')); ?>" alt="fp1.jpg">
                 <div class="thmb_cntnt">
                   <ul class="tag mb0">
                     <li class="list-inline-item"><a href="#">For Rent</a></li>
@@ -172,7 +170,7 @@
                 </div>
                 <div class="fp_footer">
                   <ul class="fp_meta float-left mb0">
-                    <li class="list-inline-item"><a href="#"><img src="{{ asset('images/property/pposter1.png') }}" alt="pposter1.png"></a></li>
+                    <li class="list-inline-item"><a href="#"><img src="<?php echo e(asset('images/property/pposter1.png')); ?>" alt="pposter1.png"></a></li>
                     <li class="list-inline-item"><a href="#">Ali Tufan</a></li>
                   </ul>
                   <div class="fp_pdate float-right">4 years ago</div>
@@ -181,9 +179,9 @@
             </div>
           </div>
           <div class="col-md-6 col-lg-3 property-item" style="transition: all 0.3s ease-in-out;">
-            <div class="feat_property home7 style4 property-card" style="cursor: pointer;" onclick="window.location.href='{{ route('listing.single.v2') }}'">
+            <div class="feat_property home7 style4 property-card" style="cursor: pointer;" onclick="window.location.href='<?php echo e(route('listing.single.v2')); ?>'">
               <div class="thumb">
-                <img class="img-whp" src="{{ asset('images/property/fp2.jpg') }}" alt="fp2.jpg">
+                <img class="img-whp" src="<?php echo e(asset('images/property/fp2.jpg')); ?>" alt="fp2.jpg">
                 <div class="thmb_cntnt">
                   <ul class="tag mb0">
                     <li class="list-inline-item"><a href="#">For Rent</a></li>
@@ -209,7 +207,7 @@
                 </div>
                 <div class="fp_footer">
                   <ul class="fp_meta float-left mb0">
-                    <li class="list-inline-item"><a href="#"><img src="{{ asset('images/property/pposter1.png') }}" alt="pposter1.png"></a></li>
+                    <li class="list-inline-item"><a href="#"><img src="<?php echo e(asset('images/property/pposter1.png')); ?>" alt="pposter1.png"></a></li>
                     <li class="list-inline-item"><a href="#">Ali Tufan</a></li>
                   </ul>
                   <div class="fp_pdate float-right">4 years ago</div>
@@ -218,9 +216,9 @@
             </div>
           </div>
           <div class="col-md-6 col-lg-3 property-item" style="transition: all 0.3s ease-in-out;">
-            <div class="feat_property home7 style4 property-card" style="cursor: pointer;" onclick="window.location.href='{{ route('listing.single.v2') }}'">
+            <div class="feat_property home7 style4 property-card" style="cursor: pointer;" onclick="window.location.href='<?php echo e(route('listing.single.v2')); ?>'">
               <div class="thumb">
-                <img class="img-whp" src="{{ asset('images/property/fp3.jpg') }}" alt="fp3.jpg">
+                <img class="img-whp" src="<?php echo e(asset('images/property/fp3.jpg')); ?>" alt="fp3.jpg">
                 <div class="thmb_cntnt">
                   <ul class="tag mb0">
                     <li class="list-inline-item"><a href="#">For Sale</a></li>
@@ -246,7 +244,7 @@
                 </div>
                 <div class="fp_footer">
                   <ul class="fp_meta float-left mb0">
-                    <li class="list-inline-item"><a href="#"><img src="{{ asset('images/property/pposter1.png') }}" alt="pposter1.png"></a></li>
+                    <li class="list-inline-item"><a href="#"><img src="<?php echo e(asset('images/property/pposter1.png')); ?>" alt="pposter1.png"></a></li>
                     <li class="list-inline-item"><a href="#">Sarah Johnson</a></li>
                   </ul>
                   <div class="fp_pdate float-right">2 years ago</div>
@@ -255,9 +253,9 @@
             </div>
           </div>
           <div class="col-md-6 col-lg-3 property-item" style="transition: all 0.3s ease-in-out;">
-            <div class="feat_property home7 style4 property-card" style="cursor: pointer;" onclick="window.location.href='{{ route('listing.single.v2') }}'">
+            <div class="feat_property home7 style4 property-card" style="cursor: pointer;" onclick="window.location.href='<?php echo e(route('listing.single.v2')); ?>'">
               <div class="thumb">
-                <img class="img-whp" src="{{ asset('images/property/fp1.jpg') }}" alt="fp1.jpg">
+                <img class="img-whp" src="<?php echo e(asset('images/property/fp1.jpg')); ?>" alt="fp1.jpg">
                 <div class="thmb_cntnt">
                   <ul class="tag mb0">
                     <li class="list-inline-item"><a href="#">For Rent</a></li>
@@ -283,7 +281,7 @@
                 </div>
                 <div class="fp_footer">
                   <ul class="fp_meta float-left mb0">
-                    <li class="list-inline-item"><a href="#"><img src="{{ asset('images/property/pposter1.png') }}" alt="pposter1.png"></a></li>
+                    <li class="list-inline-item"><a href="#"><img src="<?php echo e(asset('images/property/pposter1.png')); ?>" alt="pposter1.png"></a></li>
                   <li class="list-inline-item"><a href="#">Mike Chen</a></li>
                   </ul>
                   <div class="fp_pdate float-right">1 year ago</div>
@@ -292,9 +290,9 @@
             </div>
           </div>
           <div class="col-md-6 col-lg-3 property-item" style="transition: all 0.3s ease-in-out;">
-            <div class="feat_property home7 style4 property-card" style="cursor: pointer;" onclick="window.location.href='{{ route('listing.single.v2') }}'">
+            <div class="feat_property home7 style4 property-card" style="cursor: pointer;" onclick="window.location.href='<?php echo e(route('listing.single.v2')); ?>'">
               <div class="thumb">
-                <img class="img-whp" src="{{ asset('images/property/fp2.jpg') }}" alt="fp2.jpg">
+                <img class="img-whp" src="<?php echo e(asset('images/property/fp2.jpg')); ?>" alt="fp2.jpg">
                 <div class="thmb_cntnt">
                   <ul class="tag mb0">
                     <li class="list-inline-item"><a href="#">For Sale</a></li>
@@ -320,7 +318,7 @@
                 </div>
                 <div class="fp_footer">
                   <ul class="fp_meta float-left mb0">
-                    <li class="list-inline-item"><a href="#"><img src="{{ asset('images/property/pposter1.png') }}" alt="pposter1.png"></a></li>
+                    <li class="list-inline-item"><a href="#"><img src="<?php echo e(asset('images/property/pposter1.png')); ?>" alt="pposter1.png"></a></li>
                     <li class="list-inline-item"><a href="#">Emma Wilson</a></li>
                   </ul>
                   <div class="fp_pdate float-right">3 months ago</div>
@@ -329,9 +327,9 @@
             </div>
           </div>
           <div class="col-md-6 col-lg-3 property-item" style="transition: all 0.3s ease-in-out;">
-            <div class="feat_property home7 style4 property-card" style="cursor: pointer;" onclick="window.location.href='{{ route('listing.single.v2') }}'">
+            <div class="feat_property home7 style4 property-card" style="cursor: pointer;" onclick="window.location.href='<?php echo e(route('listing.single.v2')); ?>'">
               <div class="thumb">
-                <img class="img-whp" src="{{ asset('images/property/fp3.jpg') }}" alt="fp3.jpg">
+                <img class="img-whp" src="<?php echo e(asset('images/property/fp3.jpg')); ?>" alt="fp3.jpg">
                 <div class="thmb_cntnt">
                   <ul class="tag mb0">
                     <li class="list-inline-item"><a href="#">For Rent</a></li>
@@ -357,7 +355,7 @@
                 </div>
                 <div class="fp_footer">
                   <ul class="fp_meta float-left mb0">
-                    <li class="list-inline-item"><a href="#"><img src="{{ asset('images/property/pposter1.png') }}" alt="pposter1.png"></a></li>
+                    <li class="list-inline-item"><a href="#"><img src="<?php echo e(asset('images/property/pposter1.png')); ?>" alt="pposter1.png"></a></li>
                     <li class="list-inline-item"><a href="#">David Brown</a></li>
                   </ul>
                   <div class="fp_pdate float-right">6 months ago</div>
@@ -366,9 +364,9 @@
             </div>
           </div>
           <div class="col-md-6 col-lg-3 property-item" style="transition: all 0.3s ease-in-out;">
-            <div class="feat_property home7 style4 property-card" style="cursor: pointer;" onclick="window.location.href='{{ route('listing.single.v2') }}'">
+            <div class="feat_property home7 style4 property-card" style="cursor: pointer;" onclick="window.location.href='<?php echo e(route('listing.single.v2')); ?>'">
               <div class="thumb">
-                <img class="img-whp" src="{{ asset('images/property/fp1.jpg') }}" alt="fp1.jpg">
+                <img class="img-whp" src="<?php echo e(asset('images/property/fp1.jpg')); ?>" alt="fp1.jpg">
                 <div class="thmb_cntnt">
                   <ul class="tag mb0">
                     <li class="list-inline-item"><a href="#">For Sale</a></li>
@@ -394,7 +392,7 @@
                 </div>
                 <div class="fp_footer">
                   <ul class="fp_meta float-left mb0">
-                    <li class="list-inline-item"><a href="#"><img src="{{ asset('images/property/pposter1.png') }}" alt="pposter1.png"></a></li>
+                    <li class="list-inline-item"><a href="#"><img src="<?php echo e(asset('images/property/pposter1.png')); ?>" alt="pposter1.png"></a></li>
                     <li class="list-inline-item"><a href="#">Lisa Garcia</a></li>
                   </ul>
                   <div class="fp_pdate float-right">8 months ago</div>
@@ -403,9 +401,9 @@
             </div>
           </div>
           <div class="col-md-6 col-lg-3 property-item" style="transition: all 0.3s ease-in-out;">
-            <div class="feat_property home7 style4 property-card" style="cursor: pointer;" onclick="window.location.href='{{ route('listing.single.v2') }}'">
+            <div class="feat_property home7 style4 property-card" style="cursor: pointer;" onclick="window.location.href='<?php echo e(route('listing.single.v2')); ?>'">
               <div class="thumb">
-                <img class="img-whp" src="{{ asset('images/property/fp2.jpg') }}" alt="fp2.jpg">
+                <img class="img-whp" src="<?php echo e(asset('images/property/fp2.jpg')); ?>" alt="fp2.jpg">
                 <div class="thmb_cntnt">
                   <ul class="tag mb0">
                     <li class="list-inline-item"><a href="#">For Rent</a></li>
@@ -431,7 +429,7 @@
                 </div>
                 <div class="fp_footer">
                   <ul class="fp_meta float-left mb0">
-                    <li class="list-inline-item"><a href="#"><img src="{{ asset('images/property/pposter1.png') }}" alt="pposter1.png"></a></li>
+                    <li class="list-inline-item"><a href="#"><img src="<?php echo e(asset('images/property/pposter1.png')); ?>" alt="pposter1.png"></a></li>
                     <li class="list-inline-item"><a href="#">Robert Smith</a></li>
                   </ul>
                   <div class="fp_pdate float-right">5 months ago</div>
@@ -463,7 +461,7 @@
     </div>
   </div>
 </section>
-@endsection
+<?php $__env->stopSection(); ?>
 
 <style>
 .property-item {
@@ -574,3 +572,5 @@ function toggleSidebar() {
     }
 }
 </script>
+
+<?php echo $__env->make('layouts.app', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH E:\msc-it sem1\real estate project\real_estate\resources\views/listing-grid-v3.blade.php ENDPATH**/ ?>

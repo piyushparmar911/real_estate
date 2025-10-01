@@ -3,7 +3,7 @@
   <div class="container-fluid p0">
     <nav>
       <div class="menu-toggle">
-        <img class="nav_logo_img img-fluid" src="{{ asset('images/header-logo.png') }}" alt="header-logo.png">
+        <img class="nav_logo_img img-fluid" src="<?php echo e(asset('images/header-logo.png')); ?>" alt="header-logo.png">
         <button type="button" id="menu-btn">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
@@ -11,24 +11,24 @@
         </button>
       </div>
       <a href="#" class="navbar_brand float-left dn-smd">
-        <img class="logo1 img-fluid" src="{{ asset('images/header-logo2.png') }}" alt="header-logo.png">
-        <img class="logo2 img-fluid" src="{{ asset('images/header-logo2.png') }}" alt="header-logo2.png">
+        <img class="logo1 img-fluid" src="<?php echo e(asset('images/header-logo2.png')); ?>" alt="header-logo.png">
+        <img class="logo2 img-fluid" src="<?php echo e(asset('images/header-logo2.png')); ?>" alt="header-logo2.png">
       </a>
       <ul id="respMenu" class="ace-responsive-menu text-right" data-menu-style="horizontal">
         <li>
-          <a href="{{ url('/') }}"><span class="title">Home</span></a>
+          <a href="<?php echo e(url('/')); ?>"><span class="title">Home</span></a>
         </li>
         <li>
-          <a href="{{ url('/listings') }}"><span class="title">Listing</span></a>
+          <a href="<?php echo e(url('/listings')); ?>"><span class="title">Listing</span></a>
         </li>
         <li>
-          <a href="{{ url('/about') }}"><span class="title">About Us</span></a>
+          <a href="<?php echo e(url('/about')); ?>"><span class="title">About Us</span></a>
         </li>
         <li>
-          <a href="{{ url('/contact') }}"><span class="title">Contact</span></a>
+          <a href="<?php echo e(url('/contact')); ?>"><span class="title">Contact</span></a>
         </li>
         <li class="list-inline-item list_s">
-          <a href="{{ url('/login') }}" class="btn flaticon-user">
+          <a href="<?php echo e(url('/login')); ?>" class="btn flaticon-user">
             <span class="dn-lg text-thm3">Login</span>
           </a>
         </li>
@@ -60,7 +60,7 @@
           <div class="row mt25 tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
             <div class="col-lg-6 col-xl-6">
               <div class="login_thumb">
-                <img class="img-fluid w100" src="{{ asset('images/resource/login.jpg') }}" alt="login.jpg">
+                <img class="img-fluid w100" src="<?php echo e(asset('images/resource/login.jpg')); ?>" alt="login.jpg">
               </div>
             </div>
             <div class="col-lg-6 col-xl-6">
@@ -104,7 +104,7 @@
           <div class="row mt25 tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
             <div class="col-lg-6 col-xl-6">
               <div class="regstr_thumb">
-                <img class="img-fluid w100" src="{{ asset('images/resource/regstr.jpg') }}" alt="regstr.jpg">
+                <img class="img-fluid w100" src="<?php echo e(asset('images/resource/regstr.jpg')); ?>" alt="regstr.jpg">
               </div>
             </div>
             <div class="col-lg-6 col-xl-6">
@@ -174,20 +174,21 @@
   <div class="mobile-menu">
     <div class="header stylehome1">
       <div class="d-flex justify-content-between">
-        <a class="mobile-menu-trigger" href="#menu"><img src="{{ asset('images/dark-nav-icon.svg') }}" alt=""></a>
-        <a class="nav_logo_img" href="#"><img class="img-fluid mt20" src="{{ asset('images/header-logo2.png') }}" alt="header-logo2.png"></a>
+        <a class="mobile-menu-trigger" href="#menu"><img src="<?php echo e(asset('images/dark-nav-icon.svg')); ?>" alt=""></a>
+        <a class="nav_logo_img" href="#"><img class="img-fluid mt20" src="<?php echo e(asset('images/header-logo2.png')); ?>" alt="header-logo2.png"></a>
         <a class="mobile-menu-reg-link" href="#"><span class="flaticon-user"></span></a>
       </div>
     </div>
   </div>
   <nav id="menu" class="stylehome1">
     <ul>
-      <li><a href="{{ url('/') }}">Home</a></li>
-      <li><a href="{{ url('/listings') }}">Listing</a></li>
-      <li><a href="{{ url('/about') }}">About Us</a></li>
-      <li><a href="{{ url('/contact') }}">Contact</a></li>
-      <li><a href="{{ url('/login') }}"><span class="flaticon-user"></span> Login</a></li>
+      <li><a href="<?php echo e(url('/')); ?>">Home</a></li>
+      <li><a href="<?php echo e(url('/listings')); ?>">Listing</a></li>
+      <li><a href="<?php echo e(url('/about')); ?>">About Us</a></li>
+      <li><a href="<?php echo e(url('/contact')); ?>">Contact</a></li>
+      <li><a href="<?php echo e(url('/login')); ?>"><span class="flaticon-user"></span> Login</a></li>
       <li class="cl_btn"><a class="btn btn-block btn-lg btn-thm circle" href="#"><span class="flaticon-plus"></span> Create Listing</a></li>
     </ul>
   </nav>
 </div>
+<?php /**PATH E:\msc-it sem1\real estate project\real_estate\resources\views/partials/header.blade.php ENDPATH**/ ?>

@@ -2,47 +2,46 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
-    /** @use HasFactory<\Database\Factories\UserFactory> */
-    use HasFactory, Notifiable;
-
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var list<string>
-     */
-    protected $fillable = [
-        'name',
-        'email',
-        'password',
-    ];
-
-    /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var list<string>
-     */
-    protected $hidden = [
-        'password',
-        'remember_token',
-    ];
-
-    /**
-     * Get the attributes that should be cast.
-     *
-     * @return array<string, string>
-     */
-    protected function casts(): array
+    // Minimal User model to satisfy Laravel's requirements
+    // This model exists only to prevent errors, no authentication functionality
+    
+    protected $fillable = [];
+    
+    // Disable timestamps if no users table exists
+    public $timestamps = false;
+    
+    // Override authentication methods to prevent errors
+    public function getAuthIdentifierName()
     {
-        return [
-            'email_verified_at' => 'datetime',
-            'password' => 'hashed',
-        ];
+        return 'id';
+    }
+    
+    public function getAuthIdentifier()
+    {
+        return null;
+    }
+    
+    public function getAuthPassword()
+    {
+        return null;
+    }
+    
+    public function getRememberToken()
+    {
+        return null;
+    }
+    
+    public function setRememberToken($value)
+    {
+        // Do nothing
+    }
+    
+    public function getRememberTokenName()
+    {
+        return null;
     }
 }

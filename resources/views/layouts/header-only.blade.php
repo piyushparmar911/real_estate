@@ -16,9 +16,25 @@
   <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
   @stack('styles')
   <style>
-    /* Custom spacing adjustments for home search section and the cities section */
-    .home-three .home_adv_srch_opt { margin-bottom: 60px; }
-    #property-city { margin-top: 100px; clear: both; }
+    /* Custom spacing adjustments for auth pages */
+    .auth-page-content {
+      min-height: calc(100vh - 120px);
+      padding-top: 20px;
+      background: #f8f9fa;
+    }
+    
+    .auth-container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    
+    .auth-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      padding: 40px;
+    }
   </style>
   <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -32,34 +48,14 @@
   <!-- Header -->
   @include('partials.header')
 
-  <!-- Flash Messages -->
-  @if (session('success'))
-    <div class="alert alert-success alert-dismissible fade show" role="alert" style="margin: 0; border-radius: 0;">
-      <div class="container">
-        {{ session('success') }}
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-    </div>
-  @endif
-
-  @if (session('error'))
-    <div class="alert alert-danger alert-dismissible fade show" role="alert" style="margin: 0; border-radius: 0;">
-      <div class="container">
-        {{ session('error') }}
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-    </div>
-  @endif
-
   <!-- Page Content -->
-  @yield('content')
-
-  <!-- Footer -->
-  @include('partials.footer')
+  <div class="auth-page-content">
+    <div class="auth-container">
+      <div class="auth-card">
+        @yield('content')
+      </div>
+    </div>
+  </div>
 </div>
 <a class="scrollToHome text-thm3" href="#"><i class="flaticon-arrows"></i></a>
 <!-- Scripts -->

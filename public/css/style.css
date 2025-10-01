@@ -1392,14 +1392,7 @@ header.header-nav.menu_style_home_one.style2 ul.ace-responsive-menu li.list_s{
   position: relative;
 }
 header.header-nav.menu_style_home_one.style2 ul.ace-responsive-menu li.list_s:before{
-  background-color: #e8eef2;
-  content:"";
-  height: 38px;
-  left: -5px;
-  position: absolute;
-  right: 0;
-  top: 26px;
-  width: 1px;
+  display: none;
 }
 header.header-nav.menu_style_home_one.style2.home10 ul.ace-responsive-menu li.list_s:before{
   display: none;
